@@ -6,9 +6,11 @@ Add the plugin:
 cordova plugin add https://github.com/storepilot/cordova-plugin-sumup
 
 # Usage
-Importing the plugin (note, the plugin does NOT use global variables):
+Importing the plugin OR use the global variables
 
 `import * as SumUp from 'cordova-plugin-sumup';`
+
+`window.SumUp OR SumUp`
 
 ## Authenticating
 
@@ -74,6 +76,10 @@ interface SumUpPayment {
 `SumUp.settings(): Promise<void>`
 
 Opens the settings page.
+
+`SumUp.isloggedin(): Promise<BOOLEAN>`
+
+Checks if User has already logged into SumUp (iOS ONLY)
 
 # FINAL NOTES
 This is forked from https://github.com/nuvoPoint/cordova-plugin-sumup and edited to allow programmable apikey

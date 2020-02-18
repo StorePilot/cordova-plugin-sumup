@@ -28,5 +28,8 @@ module.exports = {
     },
     pay: function (amount, currencycode, title) {
         return new Promise((resolve, reject) => cordova.exec(resolve, reject, 'SumUp', 'pay', [amount, currencycode, title]));
+    },
+    isloggedin: function() {
+        return new Promise((resolve, reject) => cordova.exec(resolve, reject, 'SumUp', 'isLoggedIn', []));
     }
 }
